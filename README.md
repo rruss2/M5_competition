@@ -1,13 +1,10 @@
 # M5_competition
-Time series forecasting competition on www.kaggle.com.
-
-## Background
 Time series forecasting competition on https://www.kaggle.com/c/m5-forecasting-accuracy.
 
 ## Objectives
 The objective of the M5 forecasting competition is to advance the theory and practice of forecasting by identifying the method(s) that provide the most accurate point forecasts for each of the 42,840 time series of the competition. I addition, to elicit information to estimate the uncertainty distribution of the realized values of these series as precisely as possible. 
 
-## The Dataset
+## Dataset Description
 The M5 dataset, generously made available by Walmart, involves the unit sales of various products sold in the USA, organized in the form of grouped time series. More specifically, the dataset involves the unit sales of 3,049 products, classified in 3 product categories (Hobbies, Foods, and Household) and 7 product departments, in which the above-mentioned categories are disaggregated.  The products are sold across ten stores, located in three States (CA, TX, and WI). In this respect, the bottom-level of the hierarchy, i.e., product-store unit sales can be mapped across either product categories or geographical regions, as follows:
 
 ![](Images/dataset_diagram.png)
@@ -47,5 +44,10 @@ Contains the historical daily unit sales data per product and store.
 •	state_id: The State where the store is located.
 •	d_1, d_2, …, d_i, … d_1941: The number of units sold at day i, starting from 2011-01-29. 
 
+Dataset Description retrieved from the competition guidelines: https://mofc.unic.ac.cy/m5-competition/
 
+## Learning
+
+
+## 
 

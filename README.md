@@ -10,6 +10,7 @@ The M5 dataset, generously made available by Walmart, involves the unit sales of
 ![](Images/dataset_diagram.png)
 
 Figure 1 retrieved from: https://mofc.unic.ac.cy/m5-competition/
+
 Figure 1: An overview of how the M5 series are organized.
 The historical data range from 2011-01-29 to 2016-06-19. Thus, the products have a (maximum) selling history of 1,941  days / 5.4 years (test data of h=28 days not included). 
 

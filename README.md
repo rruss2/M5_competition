@@ -1,7 +1,3 @@
-# EDA notebook
-Click link to view all the charts to the EDA notebook.
-https://nbviewer.jupyter.org/github/rruss2/M5_competition/blob/master/walmart_sales_forecast_eda.ipynb
-
 # M5 Competition
 Time series Walmart sales forecasting competition on https://www.kaggle.com/c/m5-forecasting-accuracy.
 

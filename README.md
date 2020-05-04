@@ -77,8 +77,13 @@ How to forecast Walmart sales for the next 28 days based on previous sales?
 What are some techniques to estimate point forecasts of the unit sales of various products sold in the USA by Walmart?
 
 ## Insights from EDA
+![](Images/foods_states_image.png)
 
 
+![](Images/demand_CA_image.png)
+
+
+![](Images/sell_price_image.png)
 ## Feature Selection and Engineering
 
 

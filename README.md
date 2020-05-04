@@ -41,31 +41,49 @@ The M5 dataset consists of the following three (3) files:
 File 1: “calendar.csv” 
 Contains information about the dates the products are sold.
 •	date: The date in a “y-m-d” format.
+
 •	wm_yr_wk: The id of the week the date belongs to.
+
 •	weekday: The type of the day (Saturday, Sunday, …, Friday).
+
 •	wday: The id of the weekday, starting from Saturday.
+
 •	month: The month of the date.
+
 •	year: The year of the date.
+
 •	event_name_1: If the date includes an event, the name of this event.
+
 •	event_type_1: If the date includes an event, the type of this event.
+
 •	event_name_2: If the date includes a second event, the name of this event.
+
 •	event_type_2: If the date includes a second event, the type of this event.
+
 •	snap_CA, snap_TX, and snap_WI: A binary variable (0 or 1) indicating whether the stores of CA, TX or WI allow SNAP  purchases on the examined date. 1 indicates that SNAP purchases are allowed.
 
 File 2: “sell_prices.csv”
 Contains information about the price of the products sold per store and date.
 •	store_id: The id of the store where the product is sold. 
+
 •	item_id: The id of the product.
+
 •	wm_yr_wk: The id of the week.
+
 •	sell_price: The price of the product for the given week/store. The price is provided per week (average across seven days). If not available, this means that the product was not sold during the examined week. Note that although prices are constant at weekly basis, they may change through time (both training and test set).  
 
 File 3: “sales_train.csv” 
 Contains the historical daily unit sales data per product and store.
 •	item_id: The id of the product.
+
 •	dept_id: The id of the department the product belongs to.
+
 •	cat_id: The id of the category the product belongs to.
+
 •	store_id: The id of the store where the product is sold.
+
 •	state_id: The State where the store is located.
+
 •	d_1, d_2, …, d_i, … d_1941: The number of units sold at day i, starting from 2011-01-29. 
 
 Reference:
@@ -79,27 +97,34 @@ What are some techniques to estimate point forecasts of the unit sales of variou
 ## Insights from EDA
 ![](Images/foods_states_image.PNG)
 
-
-
+According to the plots above, I can see among the three states there are days with zero sales which is Christmas. I can observe the days before and after Christmas there are higher food sales than other day, and these days are Thanksgiving and the Super Bowl.
 
 ![](Images/demand_CA_image.PNG)
 
 
-
-
 ![](Images/sell_price_CA_image.PNG)
-## Feature Selection and Engineering
 
+An observation of demand and sell_price is as time increase demand and sell_price increases. Demand follows a similar pattern as total sales. Demand in store CA_1 is representative of sales data. The data has seasonality; therefore, does not have stationarity. Before modeling, I will preprocessing the data to correct for seasonality.
+
+## Feature Selection and Engineering
+- Data Features
+- Lag Features
+- Use Lasso Regression for Feature Selection
+- Standard Scalar to normalize the features
+- Encoded categorical variables with LabelEncoder
 
 ## Data Preprocessing
-The numerical variables have outliers and skewd distributions.  I correct for this by normalizing the variables through scaling the numerical variables with StandardScaler in scikit learn.  I encoded the categorical variables with OneHotEncoder in scikit learn.  I created a preprocessing pipeline in scikit learn to automate the process.  In addition to scaling and encoding the data, I split the data into 80% training and 20% testing.
+- Merged and melted data frames
+- Removed unnecessary columns
+- Created new columns
+- Splitting data into training and testing datasets
+- Normalized the features with Standard Scalar
 
 ## Model Selection
-The following models I considered were Logistic Regression, Support Vector Classifier, Decision Tree Classifier, Random Forest Classifier, Gradient Boosting Classifier, Extreme Gradient Boosting Classifier, Light Gradient Boosting Machine Classifier, and Multi-layer Perceptron Classifier.  
-
+I use the RMSE evaluation metric for each model to select the highest performing model.  The model with the lowest RMSE has the best fit to the data for forecasting the Walmart sales data.  The models I use were SARIMAX, Holt-Winters, Linear Regression with Ridge Regression, XGBoost Regressor, LGBM Regressor.  The best performing model is LGBM Regressor with approximately 2.3 RMSE.  This is the model I will use for the forecasting of Walmart sales data for 28 days.
 
 ## Relative Important Features
 
 
 ## Further Investigation
-
+Some future research I want to do is with neural networks for time series such as LSTM.  Another model I want to investigate is the FBprophet models to forecast sales data.  I also want to research how to be more creative in feature engineering for time series data.

@@ -17,11 +17,16 @@ There were four previous M competitions to advance the research of forecasting t
 Reference:
 MOFC. (2020). The M5 Competition Competitors' Guide. Retrieved from:  https://mofc.unic.ac.cy/m5-competition/ 
 
-## Objectives
+## Objective
 The objective of the M5 forecasting competition is to advance the theory and practice of forecasting by identifying the method(s) that provide the most accurate point forecasts for each of the 42,840 time series of the competition.  To that end, the participants of M5 are asked to provide 28 days ahead point forecasts (PFs) for all the series of the competition.
 
 Reference:
 MOFC. (2020). The M5 Competition Competitors' Guide. Retrieved from:  https://mofc.unic.ac.cy/m5-competition/ 
+
+## Research Questions
+How to forecast Walmart sales for the next 28 days based on previous sales?
+
+What are some techniques to estimate point forecasts of the unit sales of various products sold in the USA by Walmart?
 
 ## Learning
 I learned from the project how to analyze time-series sales data.  I learned how to write Python code for exploratory data analyis for time series data, combine multiple data sets, wrangle time-series data, prepare time-series data for modeling, and apply SARIMA, XGBoost, LightGBM, LSTM models to forecast 28 days of sales.  
@@ -88,11 +93,6 @@ Contains the historical daily unit sales data per product and store.
 
 Reference:
 MOFC. (2020). The M5 Competition Competitors' Guide. Retrieved from:  https://mofc.unic.ac.cy/m5-competition/ 
-
-## Research Questions
-How to forecast Walmart sales for the next 28 days based on previous sales?
-
-What are some techniques to estimate point forecasts of the unit sales of various products sold in the USA by Walmart?
 
 ## Insights from EDA
 ![](Images/foods_states_image.PNG)

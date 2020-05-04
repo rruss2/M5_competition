@@ -1,3 +1,8 @@
+# Slides and Presentation Recording
+Slides link: https://tinyurl.com/m5slides
+
+Recording link: https://www.youtube.com/watch?v=FagzF9OAQPc
+
 # M5 Competition
 Time series Walmart sales forecasting competition on https://www.kaggle.com/c/m5-forecasting-accuracy.
 

@@ -124,7 +124,9 @@ An observation of demand and sell_price is as time increase demand and sell_pric
 I use the RMSE evaluation metric for each model to select the highest performing model.  The model with the lowest RMSE has the best fit to the data for forecasting the Walmart sales data.  The models I use were SARIMAX, Holt-Winters, Linear Regression with Ridge Regression, XGBoost Regressor, LGBM Regressor.  The best performing model is LGBM Regressor with approximately 2.3 RMSE.  This is the model I will use for the forecasting of Walmart sales data for 28 days.
 
 ## Relative Important Features
+![](Images/top_features_lgbm_image.PNG)
 
+I can see from the relative feature importance that the top 3 features are item_id, sell_price, and week. I think item_id and sell_price makes sense to be the top features for the forecast because the forecast will depend on the items and price of the items. Week also makes sense because the forecast depends on time parameters to make a forecast, so having a time parameter in the top three relative important features is logical.
 
 ## Further Investigation
 Some future research I want to do is with neural networks for time series such as LSTM.  Another model I want to investigate is the FBprophet models to forecast sales data.  I also want to research how to be more creative in feature engineering for time series data.
